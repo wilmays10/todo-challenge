@@ -12,6 +12,7 @@ El propósito de esta prueba es conocer tu capacidad para crear una pequeña apl
 
 El usuario de la aplicación tiene que ser capaz de:
 
+- Autenticarse
 - Crear una tarea
 - Eliminar una tarea
 - Marcar tareas como completadas
@@ -21,6 +22,7 @@ El usuario de la aplicación tiene que ser capaz de:
 ## Qué evaluamos:
 
 - Desarrollo utilizando Python, Django. No es necesario crear un Front-End, pero sí es necesario tener una API que permita cumplir con los objetivos de arriba.
+- Uso de librerías y paquetes estandares que reduzcan la cantidad de código propio añadido.
 - Calidad y arquitectura de código. Facilidad de lectura y mantenimiento del código. Estándares seguidos.
 - [Bonus] Manejo de logs.
 - [Bonus] Creación de tests (unitarias y de integración)
