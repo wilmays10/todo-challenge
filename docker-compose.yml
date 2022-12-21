@@ -1,0 +1,32 @@
+version: "3.7"
+
+volumes:
+  db-data:
+
+services:
+  back:
+    build:
+      dockerfile: Dockerfile.dev
+      context: .
+    container_name: todo-challenge-back
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    environment:
+      POSTGRES_USER: invera_user
+      POSTGRES_PASSWORD: asecretpassword
+      POSTGRES_DB: invera_db
+    volumes:
+      - .:/code
+
+  db:
+    image: postgres:12-alpine
+    container_name: todo-challenge-db
+    environment:
+      POSTGRES_USER: invera_user
+      POSTGRES_PASSWORD: asecretpassword
+      POSTGRES_DB: invera_db
+      PGDATA: /var/lib/postgresql/data/pgdata
+    volumes:
+      - db-data:/var/lib/postgresql/data/pgdata
