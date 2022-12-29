@@ -1,0 +1,15 @@
+<nav class="navbar bg-light fixed-top">
+  <div class="container-fluid">
+    <div class="tab-title">
+      <a href="{% url 'index' %}" id="home" >Invera</a>
+    </div>
+      <ul class="sidebar-nav">
+       {% if user.is_authenticated %}
+         <li>Welcome {{ user.get_username }}</li>
+         <li><a href="{% url 'logout'%}?next={{request.path}}">Logout</a></li>
+       {% else %}
+         <li><a href="{% url 'login'%}?next={{request.path}}">Login</a></li>
+       {% endif %}
+    </ul>
+  </div>
+</nav>
