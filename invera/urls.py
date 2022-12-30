@@ -22,5 +22,6 @@ urlpatterns = [
     path('accounts/', include('django.contrib.auth.urls')),
     path('admin/', admin.site.urls),
     path('api/', include('tareas.api.urls')),
-    path('o/', include('oauth2_provider.urls', namespace='oauth2_provider')),
+    path('api/registration/', include('dj_rest_auth.registration.urls')),
+    path('api/authentication/', include('dj_rest_auth.urls')),
 ]
