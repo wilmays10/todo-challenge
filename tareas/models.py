@@ -9,4 +9,4 @@ class Tarea(models.Model):
     timestamp = models.DateField(auto_now=True)
 
     def __str__(self):
-        return f'{self.pk} - {self.titulo}'
+        return f"{self.pk} - {self.titulo}"

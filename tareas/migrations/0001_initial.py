@@ -7,19 +7,26 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='Tarea',
+            name="Tarea",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('titulo', models.CharField(max_length=90)),
-                ('descripcion', models.TextField()),
-                ('comentario', models.CharField(blank=True, max_length=250, null=True)),
-                ('completada', models.BooleanField(default=False)),
-                ('timestamp', models.DateField(auto_now=True)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("titulo", models.CharField(max_length=90)),
+                ("descripcion", models.TextField()),
+                ("comentario", models.CharField(blank=True, max_length=250, null=True)),
+                ("completada", models.BooleanField(default=False)),
+                ("timestamp", models.DateField(auto_now=True)),
             ],
         ),
     ]
