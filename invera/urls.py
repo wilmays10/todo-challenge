@@ -18,10 +18,10 @@ from django.urls import path, include
 from tareas import views
 
 urlpatterns = [
-    path('', views.index, name='index'),
-    path('accounts/', include('django.contrib.auth.urls')),
-    path('admin/', admin.site.urls),
-    path('api/', include('tareas.api.urls')),
-    path('api/registration/', include('dj_rest_auth.registration.urls')),
-    path('api/authentication/', include('dj_rest_auth.urls')),
+    path("", views.index, name="index"),
+    path("accounts/", include("django.contrib.auth.urls")),
+    path("admin/", admin.site.urls),
+    path("api/", include("tareas.api.urls")),
+    path("api/registration/", include("dj_rest_auth.registration.urls")),
+    path("api/authentication/", include("dj_rest_auth.urls")),
 ]
