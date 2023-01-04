@@ -6,6 +6,7 @@ class Tarea(models.Model):
     descripcion = models.TextField()
     comentario = models.CharField(max_length=250, blank=True, null=True)
     completada = models.BooleanField(default=False)
+    timestamp = models.DateField(auto_now=True)
 
     def __str__(self):
         return f'{self.pk} - {self.titulo}'
